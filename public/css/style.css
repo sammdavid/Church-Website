@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Space Mono';               /* name you’ll use in CSS */
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Bold';               /* name you’ll use in CSS */
+    src: url('../fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';               /* name you’ll use in CSS */
+    src: url('../Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metropolis Bold';               /* name you’ll use in CSS */
+    src: url('../Metropolis-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Metropolis';               /* name you’ll use in CSS */
+    src: url('../Metropolis-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Figtree';               /* name you’ll use in CSS */
+    src: url('../Figtree-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree Medium';               /* name you’ll use in CSS */
+    src: url('../Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';               /* name you’ll use in CSS */
+    src: url('../Montserrat.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garamond';               /* name you’ll use in CSS */
+    src: url('../EBGaramond-VariableFont_wght.ttf') format('truetype');
+}
+
+
+html {
+  scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+
+}
+
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0px;
+    height: 80px;
+    gap: 50px;
+    z-index: 1000;
+}
+
+header.solid {
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    height:100%;
+}
+
+nav ul li a {
+    display: flex;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 20;
+    transition: color 0.3s, ease, background 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: 'Inter';
+    letter-spacing: 2px;
+}
+
+nav ul li a:hover {
+    color:#ffcc00;
+    background-color: #333333;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.hero {
+    background-image: url('../images/sam.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50%;
+    position: relative;
+    z-index: 2;
+
+}
+
+.welcome {
+    font-family: 'Montserrat', monospace;
+    letter-spacing: 2px;
+    font-weight:bold;
+    font-size: 100px;
+}
+
+.intro {
+    font-family: 'Montserrat', monospace;
+    font-size: 30px;
+    font-weight:70;
+    margin-top: -50px;
+  
+}
+
+.about {
+    padding: 40px 10%;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+.section-title {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-subtitle {
+    font-family: 'Inter';
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba (0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.history {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.history-text {
+    flex: 1;
+    font-family: 'Inter';
+    font-size: 30px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.history-text p {
+    margin-top: 0;
+}
+
+
+.history-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.history-image img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: -60px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.btn {
+    display: inline-block;
+    background-color:#ffcc00;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 600;
+    margin-top: 0px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6b800;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#visi-misi {
+  padding: 80px 9%;
+  background: #f8f9fa;
+}
+
+#visi-misi h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#visi-misi .column p {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 70px;
+    color: #333;
+    padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.column h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.column ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+  font-family: 'Montserrat';
+  font-size: 70px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bg-section {
+  position: relative;
+  background-image: url('../images/raisehand.png'); /* your new image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.bg-section .bg-overlay {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); /* dark overlay so text is readable */
+  z-index: 1;
+}
+
+.bg-section .section-text {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bg-section h2 {
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.bg-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
